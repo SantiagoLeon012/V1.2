@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario de Inscripción</title>
+
+<link rel="stylesheet" href="css1.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Formulario de Inscripción</h2>
+
+<form>
+
+<label>Tipo de documento</label>
+<select required>
+<option value="">Seleccione</option>
+<option>Cédula de ciudadanía</option>
+<option>Tarjeta de identidad</option>
+<option>Cédula extranjera</option>
+<option>Pasaporte</option>
+</select>
+
+<label>Número de documento</label>
+<input type="text" pattern="[0-9]{6,12}" required
+title="Debe contener entre 6 y 12 números">
+
+<label>Nombres</label>
+<input type="text" minlength="3" maxlength="64"
+pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}" required
+title="Entre 3 y 64 caracteres, solo letras">
+
+<label>Apellidos</label>
+<input type="text" minlength="3" maxlength="64"
+pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}" required
+title="Entre 3 y 64 caracteres, solo letras">
+
+<label>Dirección</label>
+<input type="text" required>
+
+<label>Teléfono celular</label>
+<input type="tel" pattern="[0-9]{10}" required
+title="Debe tener 10 números">
+
+<label>Correo electrónico</label>
+<input type="email"
+pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+required
+title="Debe contener @ y dominio válido">
+
+<label>Usuario</label>
+<input type="text" minlength="5" maxlength="20"
+pattern="[A-Za-z0-9_]{5,20}" required
+title="Entre 5 y 20 caracteres, letras o números">
+
+<label>Password</label>
+<input type="password" id="password"
+pattern="(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[._\-]).{8,}"
+required
+title="Debe tener mínimo 8 caracteres, mayúscula, minúscula, número y símbolo (. _ -)">
+<button type="button" id="togglePass">Mostrar contraseña</button>
+
+<label>Fecha de inscripción</label>
+<input type="date" required>
+
+<label>Hobbies</label>
+
+<label><input class="hobbies" type="checkbox"> Deportes</label>
+<label><input class="hobbies" type="checkbox"> Música</label>
+<label><input class="hobbies" type="checkbox"> Lectura</label>
+<label><input class="hobbies" type="checkbox"> Videojuegos</label>
+<label><input class="hobbies" type="checkbox"> Programación</label>
+
+<button type="submit">Registrarse</button>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
